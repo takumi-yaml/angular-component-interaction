@@ -1,0 +1,10 @@
+<button (click)="changeName()">change Name</button>
+<p>{{ _currentVal }}</p>
+<div><app-example-child #child [name]="name" (alert)="onAlert($event)"></app-example-child></div>
+
+    <span *ngFor="let name of clickedName">{{ name }}</span>
+
+
+<input [(ngModel)]="newName">
+<button (click)="child.getNewName(newName)">add new name</button>
+<button (click)="changeToNewName(newName)">change to new name</button>
